@@ -16,7 +16,7 @@ function __burlify() {
 }
 
 // half-assed attempted at version sniffing
-if (/Firefox\/(\d+).\d+$/.exec(navigator.userAgent)[1] == 23) {
+if (parseInt(/Firefox\/(\d+).\d+$/.exec(navigator.userAgent)[1]) >= 23) {
   var __burly=__getBlinkTextDecorations();
   setInterval(__burlify,1000); __burlify();
 }
