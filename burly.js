@@ -15,7 +15,7 @@ function __burlify() {
   __burly.every(function(i){ i.style.visibility = i.style.visibility == 'visible' ? 'hidden' : 'visible'; return 1; });
 }
 
-// half-assed attempted at version sniffing
+// half-assed attempt at version sniffing
 if (parseInt(/Firefox\/(\d+).\d+$/.exec(navigator.userAgent)[1]) >= 23) {
   var __burly=__getBlinkTextDecorations();
   setInterval(__burlify,1000); __burlify();
